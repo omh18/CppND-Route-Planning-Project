@@ -61,19 +61,19 @@ int main(int argc, const char **argv)
     std::cout << "Please enter values the x and y co-ordinates of the start and end positions:\n\n";
   	do{
     	std::cout << "Enter the x co-ordinate of the starting position:";
-    }while(std::cin >> start_x);
+    }while(!(std::cin >> start_x));
   
   	do{
     	std::cout << "Enter the y co-ordinate of the starting position:";
-    }while(std::cin >> start_y);
+    }while(!(std::cin >> start_y));
   
   	do{
     	std::cout << "Enter the x co-ordinate of the ending position:";
-    }while(std::cin >> end_x);
+    }while(!(std::cin >> end_x));
   
   	do{
     	std::cout << "Enter the y co-ordinate of the ending position:";
-    }while(std::cin >> end_y);
+    }while(!(std::cin >> end_y));
 
 
     // Build Model.
