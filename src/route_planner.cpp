@@ -52,7 +52,8 @@ void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
 // - Return the pointer.
 
 
-/* Alternate implementation of SortList, using lambda expressions
+/* //Alternate implementation of SortList, using lambda expressions
+	//source: https://stackoverflow.com/questions/1380463/sorting-a-vector-of-custom-objects, Ben Crowhurst
 
 void RoutePlanner::SortList(){
 	std::sort(open_list.begin( ), open_list.end( ), [ ]( const RouteModel::Node* lhs, const RouteModel::Node* rhs )
