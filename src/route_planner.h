@@ -6,6 +6,7 @@
 #include <string>
 #include "route_model.h"
 
+bool Compare(const RouteModel::Node *a, const RouteModel::Node *b);
 
 class RoutePlanner {
   public:
@@ -13,7 +14,11 @@ class RoutePlanner {
     // Add public variables or methods declarations here.
     float GetDistance() const {return distance;}
     void AStarSearch();
-
+  
+  	//Added member function SortList:
+  	void SortList();
+      
+      
     // The following methods have been made public so we can test them individually.
     void AddNeighbors(RouteModel::Node *current_node);
     float CalculateHValue(RouteModel::Node const *node);
