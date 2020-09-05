@@ -124,17 +124,19 @@ void RoutePlanner::AStarSearch() {
   	start_node->h_value = CalculateHValue(start_node);
     start_node->g_value = 0;
   	start_node->visited = true;
+	AddNeighbors(current_node);
 
   	do{
-    	AddNeighbors(current_node);
       	current_node = NextNode();
       	if (current_node == end_node){
           	m_Model.path = ConstructFinalPath(current_node);
         	break;
         }
+		AddNeighbors(current_node);
     }while(open_list.size());
   
   	if (current_node != end_node){
+		m_Model.path = ConstructFinalPath(current_node);
     	std::cout << "No path could be found!\n";
     }
 }
